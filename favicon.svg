@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88">
+  <defs>
+    <mask id="satellite-cutout">
+      <rect x="0" y="0" width="88" height="88" fill="#ffffff" />
+      <circle cx="69" cy="21" r="14" fill="#000000" />
+    </mask>
+  </defs>
+  <style>
+    :root {
+      --logo-color: #eef0ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --logo-color: #10121a;
+      }
+    }
+    .main-ring {
+      stroke: var(--logo-color);
+    }
+    .satellite-dot {
+      fill: var(--logo-color);
+    }
+  </style>
+  <circle class="main-ring" cx="39" cy="47" r="28" fill="none" stroke-width="12" mask="url(#satellite-cutout)" />
+  <circle class="satellite-dot" cx="69" cy="21" r="8" />
+</svg>
